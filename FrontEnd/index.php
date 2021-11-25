@@ -22,7 +22,8 @@
 
         <Input style="margin-top:20px;" id="pass" type="password" placeholder="Password"></br>
 
-        <Button style="margin-top:20px;" onclick="loginUser()"  class="btn-primary">Login</Button>
+        <Button style="margin-top:20px;" onclick="loginUser()"  class="btn-primary">Login</Button><br>
+        <lable><a href="Signup.php" style="text-decoration:none; color:#FF0000;">Don't have an account, Register?</a></lable>
 
     </div>
     </body>
