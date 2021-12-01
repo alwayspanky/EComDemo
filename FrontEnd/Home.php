@@ -16,6 +16,18 @@
         <section id="banner">
 
         </section>
+
+        <!-- Category Area -->
+        <section style="margin:20px">
+            <h3 >Shop by Category</h3>
+            <div class="row" style="margin:20px" id="categories">
+               
+                
+            </div>
+        </section>  
+
+        <section style="margin:200px">
+        </section>
 </body>
 <script src="Controller/home.js"></script>
 </html>

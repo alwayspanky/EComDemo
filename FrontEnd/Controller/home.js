@@ -62,4 +62,40 @@ function getAllImages(){
 });
 }
 
-window.onload = getAllImages();
+
+function getAllCategories(){
+
+    axios({
+        method: 'get',
+        url: BaseURL + "getCategories.php"
+        
+        })
+        .then(res =>{
+            var data = res.data;
+            
+            for(let i = 0; i<=data.output.category.length; i++){
+                console.log(data.output.category[i].category_name);
+
+                document.getElementById("categories").innerHTML +=` <div class="col" style="width:250px">
+                <img style="width:200px; height:200px" src="${data.output.category[i].c_image}"><a  onclick=getCategoryId(${data.output.category[i].c_id}) href="ProductList.php" /></img>
+                <h5 style="margin-left:50px; margin-top:10px">${data.output.category[i].category_name}</h5>
+            </div>`
+            }
+
+        }, err=>{
+            console.log(err)
+        });
+
+}
+
+function getCategoryId(id){
+
+    localStorage.setItem("category_id",id);
+}
+
+function start(){
+    getAllImages();
+    getAllCategories();
+}
+
+window.onload = start();
