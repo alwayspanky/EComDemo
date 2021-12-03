@@ -24,10 +24,14 @@ function getProducts(){
                     <img style="width:200px; height:200px" src="${data.output.products[i].p_image}" />
                 </div>
                 <div style="margin-left: 50px">
+                <div style="display:flex">
+                   
                     <h4 style="color:red">${data.output.products[i].p_name}</h4>
+                    <a onclick="addItemToWishlist(${data.output.products[i].p_id})"><img  style="margin-left:50px" src="https://img.icons8.com/material-outlined/24/000000/like--v1.png"/></a>
+                    </div>
                     <p>${data.output.products[i].p_description}</p>
                     <h5>₹ ${data.output.products[i].p_price}</h5>
-                    <Button style="margin-top:30px" class="btn btn-success">Buy Now</Button>
+                    <Button style="margin-top:30px" class="btn btn-success" onclick="addToCartItem(${data.output.products[i].p_id})">Add to cart</Button>
                 </div>  
             </div>`
             }
@@ -35,6 +39,31 @@ function getProducts(){
         }, err=>{
             console.log(err)
         });
+
+}
+
+function addToCartItem(pId){
+
+    var userId = localStorage.getItem("loginUserId");
+
+    console.log("productId",pId);
+    console.log("userId",userId);
+
+    alert("Added to cart");
+    
+
+}
+
+function addItemToWishlist(pId){
+
+    var userId = localStorage.getItem("loginUserId");
+
+    console.log("productId",pId);
+    console.log("userId",userId);
+
+    alert("Added to wishlist");
+    
+
 }
 
 window.onload = getProducts();

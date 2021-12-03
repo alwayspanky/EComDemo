@@ -28,6 +28,7 @@ function loginUser(){
         document.getElementById("user").value = "";
     }else{
         console.log("login successfull");
+        localStorage.setItem("loginUserId",data.output.user_id);
         window.history.forward();
         window.location.assign("Home.php");
 

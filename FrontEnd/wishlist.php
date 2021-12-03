@@ -13,8 +13,8 @@
       
     </head>
     <body >
-          <!-- Header area -->
-          <section>
+         <!-- Header area -->
+        <section>
             <div style="display:flex; padding:10px; background:#5DBB63">
                 <h3>EComDemo</h3>
                 <div style="display:flex; float:right">
@@ -24,10 +24,22 @@
                 </div>
             </div>
             <section>
-        <h3 style="margin:20px">Product List </h3>
-        <section id="product">
-            
-        </section>
+
+            <div style="background: #EBECF0; padding:10px; margin:30px; display:flex; width:50%" >
+                <div>
+                    <img style="width:200px; height:200px" src="${data.output.products[i].p_image}" />
+                </div>
+                <div style="margin-left: 50px">
+                <div style="display:flex">
+                   
+                    <h4 style="color:red">${data.output.products[i].p_name}</h4>
+                    </div>
+                    <p>${data.output.products[i].p_description}</p>
+                    <h5>₹ ${data.output.products[i].p_price}</h5>
+                    <Button style="margin-top:30px" class="btn btn-success" onclick="addToCartItem(${data.output.products[i].p_id})">Move to Wishlist</Button>
+                    <Button style="margin-top:30px" class="btn btn-success" onclick="addToCartItem(${data.output.products[i].p_id})">Remove Item</Button>
+
+                </div>  
+            </div>
 </body>
-<script src="Controller/productList.js"></script>
 </html>
