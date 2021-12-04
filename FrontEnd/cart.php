@@ -23,27 +23,12 @@
 
                 </div>
             </div>
-            <section>
+        </section>
                 <h3>MY Cart Item</h3>
-                <section>
 
+                <section id="cartItem">
 
-                <div style="background: #EBECF0; padding:10px; margin:30px; display:flex; width:50%" >
-                <div>
-                    <img style="width:200px; height:200px" src="${data.output.products[i].p_image}" />
-                </div>
-                <div style="margin-left: 50px">
-                <div style="display:flex">
-                   
-                    <h4 style="color:red">${data.output.products[i].p_name}</h4>
-                    </div>
-                    <p>${data.output.products[i].p_description}</p>
-                    <h5>₹ ${data.output.products[i].p_price}</h5>
-                    <Button style="margin-top:30px" class="btn btn-success" onclick="addToCartItem(${data.output.products[i].p_id})">Move to Cart</Button>
-                    <Button style="margin-top:30px" class="btn btn-success" onclick="addToCartItem(${data.output.products[i].p_id})">Remove Item</Button>
-
-                </div>  
-            </div>
-            </section>
+                </section>
 </body>
+<script src="Controller/cart.js"></script>
 </html>

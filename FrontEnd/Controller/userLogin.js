@@ -29,6 +29,7 @@ function loginUser(){
     }else{
         console.log("login successfull");
         localStorage.setItem("loginUserId",data.output.user_id);
+        localStorage.setItem("loginUserName", data.output.username);
         window.history.forward();
         window.location.assign("Home.php");
 

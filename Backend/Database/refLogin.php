@@ -25,8 +25,9 @@ public static function loginUser($user, $pass) {
         } else {
 
             while($row = $result->fetch_assoc()) {
-                
                 $aResult['output']['user_id'] = $row['user_id'];
+                $aResult['output']['username'] = $row['username'];
+
 
                 $aResult['status']['code'] = 'LOGIN_SUCCESSFULL';
 

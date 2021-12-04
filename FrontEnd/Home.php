@@ -10,6 +10,9 @@
         
         <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
+        
+           
+
       
     </head>
     <body >
@@ -20,6 +23,7 @@
                 <div style="display:flex; float:right">
                         <ul><a style="text-decoration:none" href="cart.php">Cart</a></ul>
                         <ul><a style="text-decoration:none" href="wishlist.php">Wishlist</a></ul>
+                        <ul id="admin-name">username</ul>
 
                 </div>
             </div>
@@ -41,4 +45,5 @@
         </section>
 </body>
 <script src="Controller/home.js"></script>
+
 </html>

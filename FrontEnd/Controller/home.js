@@ -1,6 +1,10 @@
 //////////Banner Area
 var BaseURL = "http://192.168.1.37/EComDemo/Backend/Services/";
 
+var username = localStorage.getItem("user-name");
+
+document.getElementById("admin-name").setItem("username");
+
 
 function getAllImages(){
 

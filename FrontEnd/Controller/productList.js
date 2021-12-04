@@ -46,11 +46,29 @@ function addToCartItem(pId){
 
     var userId = localStorage.getItem("loginUserId");
 
-    console.log("productId",pId);
-    console.log("userId",userId);
+    axios({
+        method: 'post',
+        url: BaseURL + "addToCart.php",
 
-    alert("Added to cart");
-    
+        params:{
+            "p_id": pId,
+            "user_id": userId
+        }
+        
+        })
+        .then(res =>{
+            var data = res.data;
+
+            if(data.status.code == "ADDED TO CART"){
+                alert("Added to cart");
+            }else{
+                alert("Failed to Add cart");
+            }
+
+        }, err=>{
+            console.log(err)
+        });
+
 
 }
 
